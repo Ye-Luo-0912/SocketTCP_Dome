@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  game_server:
+    image: ${DOCKER_REGISTRY}gameserver
+    build:
+      context: .
+      dockerfile: Game_Server\Dockerfile

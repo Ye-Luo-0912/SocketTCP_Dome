@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPServer", "TCPServer\TCPServer.csproj", "{EE40830F-1D7B-4E7B-BEDD-AAA77EFCB286}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCPServer", "TCPServer\TCPServer.csproj", "{EE40830F-1D7B-4E7B-BEDD-AAA77EFCB286}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCPClient", "TCPClient\TCPClient.csproj", "{D4C5382B-19ED-4284-BB3C-A7902909E81C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocketTCPData", "SocketTCPData\SocketTCPData.csproj", "{4A2A7383-19CE-4C81-AF16-9864C324A8D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQL_Test", "MySQL_Test\MySQL_Test.csproj", "{1406FFB6-2702-4F2D-A82F-1914E14323E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game_Server", "Game_Server\Game_Server.csproj", "{2811F7CD-31E4-4C78-9E31-4D348F75B0D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{75F07815-C8D3-4095-8653-09B8AF280918}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,26 @@ Global
 		{EE40830F-1D7B-4E7B-BEDD-AAA77EFCB286}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE40830F-1D7B-4E7B-BEDD-AAA77EFCB286}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE40830F-1D7B-4E7B-BEDD-AAA77EFCB286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4C5382B-19ED-4284-BB3C-A7902909E81C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4C5382B-19ED-4284-BB3C-A7902909E81C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4C5382B-19ED-4284-BB3C-A7902909E81C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4C5382B-19ED-4284-BB3C-A7902909E81C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A2A7383-19CE-4C81-AF16-9864C324A8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2A7383-19CE-4C81-AF16-9864C324A8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A2A7383-19CE-4C81-AF16-9864C324A8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A2A7383-19CE-4C81-AF16-9864C324A8D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1406FFB6-2702-4F2D-A82F-1914E14323E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1406FFB6-2702-4F2D-A82F-1914E14323E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1406FFB6-2702-4F2D-A82F-1914E14323E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1406FFB6-2702-4F2D-A82F-1914E14323E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2811F7CD-31E4-4C78-9E31-4D348F75B0D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2811F7CD-31E4-4C78-9E31-4D348F75B0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2811F7CD-31E4-4C78-9E31-4D348F75B0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2811F7CD-31E4-4C78-9E31-4D348F75B0D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75F07815-C8D3-4095-8653-09B8AF280918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75F07815-C8D3-4095-8653-09B8AF280918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75F07815-C8D3-4095-8653-09B8AF280918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75F07815-C8D3-4095-8653-09B8AF280918}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

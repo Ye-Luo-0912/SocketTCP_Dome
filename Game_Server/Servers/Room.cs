@@ -79,22 +79,10 @@ namespace Game_Server.Servers
                 state = RoomState.WaitingBattle;
         }
 
-        public void RemoveClient (Client client, Action action)
-        {
-            roomClents.Remove(client);
-
-            action?.Invoke();
-
-            client.Room = null;
-
-            if (roomClents.Count < 2)
-                state = RoomState.WaitingJoin;
-        }
-
         /// <summary>
         /// 关闭当前 房间
         /// </summary>
-        public void Close (Client client)
+        public void Colse (Client client, Action action)
         {
             if (IsHouseOwner(client))
             {
@@ -106,6 +94,15 @@ namespace Game_Server.Servers
                 roomClents.Clear();
                 roomClents = null;
                 server.RemoveRoom(this);
+            }
+            else
+            {
+                roomClents.Remove(client);
+                action?.Invoke();
+
+                client.Room = null;
+                if (roomClents.Count < 2)
+                    state = RoomState.WaitingJoin;
             }
         }
 

@@ -17,5 +17,7 @@ namespace Common
         StartGame,
         ShowTimer,
         StartPlay,
+        Move,
+        Shoot,
     }
 }

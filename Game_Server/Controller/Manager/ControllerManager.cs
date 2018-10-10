@@ -70,10 +70,10 @@ namespace Game_Server.Controller
 
             //var res = methodInfo.Invoke(con, new object[]{ pre, client, server});
             var res = con.ExecuteAction(action, pre, client, server);
-            if (res != null || !string.IsNullOrEmpty(res as string))
+            if (res != null || !string.IsNullOrEmpty(res))
             {
-                server.SendRequest(client, action, res as string);
-                this.Log($"请求{action.ToString()} 客户端{client.Name} 数据:{res}");
+                server.SendRequest(client, action, res);
+                this.Log($"请求: {action.ToString()} 客户端: {client.Name} 数据: {res}");
             }
         }
     }

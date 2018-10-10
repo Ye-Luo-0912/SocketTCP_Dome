@@ -119,8 +119,9 @@ namespace Game_Server.Servers
                 socketClient.Close();
 
             if (room != null)
-                room.Close(this);
+                room.Colse(this, null);
 
+            socketClient = null;
             server.RemoveClient(this);
 
             ConnHelper.CloseConnection(mySqlConn);

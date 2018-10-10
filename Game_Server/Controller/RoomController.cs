@@ -38,7 +38,7 @@ namespace Game_Server.Controller
         {
             server.CreateRoom(client, data);
 
-            return ((int)ReturningCode.Success).ToString();
+            return $"{((int)ReturningCode.Success)}:{(int)RoleType.Blue}";
         }
 
         private string ListRoom (string data, Client client, Server server)
@@ -74,7 +74,7 @@ namespace Game_Server.Controller
 
                 var rd = r.GetRoomData();
                 r.BroadcasetMessage(client, ActionCode.UpdateRoom, rd);
-                return $"{(int)ReturningCode.Success}-{rd}";
+                return $"{(int)ReturningCode.Success}:{(int)RoleType.Red}-{rd}";
             }
         }
 
@@ -85,12 +85,12 @@ namespace Game_Server.Controller
             if (client.IsHouseOwner)
             {
                 r.BroadcasetMessage(client, ActionCode.ExitRoom, $"{(int)ReturningCode.Success}");
-                r.Close(client);
+                r.Colse(client, null);
                 return $"{((int)ReturningCode.Success)}";
             }
             else
             {
-                r.RemoveClient(client, () =>
+                r.Colse(client, () =>
                 {
                     r.BroadcasetMessage(client, ActionCode.UpdateRoom, r.GetRoomData());
                 });

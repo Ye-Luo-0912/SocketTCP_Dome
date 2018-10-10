@@ -1,4 +1,5 @@
-﻿using Common;
+﻿using System;
+using Common;
 using Game_Server.Servers;
 
 namespace Game_Server.Controller
@@ -17,9 +18,19 @@ namespace Game_Server.Controller
                 case ActionCode.StartGame:
                     return StartGame(data, client, server);
 
+                case ActionCode.Move:
+                    return Move(data, client, server);
+
                 default:
                     return null;
             }
+        }
+
+        private string Move (string data, Client client, Server server)
+        {
+            if (client.Room != null)
+                client.Room.BroadcasetMessage(client, ActionCode.Move, data);
+            return null;
         }
 
         public string StartGame (string data, Client client, Server server)

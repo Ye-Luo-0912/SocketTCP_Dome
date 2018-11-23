@@ -168,10 +168,8 @@ namespace Common
             curIndex = 0;
         }
 
-        public Message ()
+        public Message ():this(BUFFERSIZE)
         {
-            buffer = new byte[BUFFERSIZE];
-            curIndex = 0;
         }
 
         #endregion 构造函数
